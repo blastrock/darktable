@@ -77,6 +77,7 @@ const char *dt_iop_order_string(const dt_iop_order_t order)
 // @@_NEW_MODULE: For new module it is required to insert the new module name in both lists below.
 
 const dt_iop_order_entry_t legacy_order[] = {
+  { { 0.5f }, "darkframe", 0},
   { { 1.0f }, "rawprepare", 0},
   { { 2.0f }, "invert", 0},
   { { 3.0f }, "temperature", 0},
@@ -167,6 +168,7 @@ const dt_iop_order_entry_t legacy_order[] = {
 
 // default order for RAW files, assumed to be linear from start
 const dt_iop_order_entry_t v30_order[] = {
+  { { 0.5f }, "darkframe", 0},
   { { 1.0 }, "rawprepare", 0},
   { { 2.0 }, "invert", 0},
   { { 3.0f }, "temperature", 0},
@@ -273,6 +275,7 @@ const dt_iop_order_entry_t v30_order[] = {
 // default order for JPEG/TIFF/PNG files, non-linear before colorin
 const dt_iop_order_entry_t v30_jpg_order[] = {
   // the following modules are not used anyway for non-RAW images :
+  { { 0.5f }, "darkframe", 0},
   { { 1.0 }, "rawprepare", 0 },
   { { 2.0 }, "invert", 0 },
   { { 3.0f }, "temperature", 0 },
@@ -457,6 +460,7 @@ GList *dt_ioppr_get_iop_order_rules()
   GList *rules = NULL;
 
   const dt_iop_order_rule_t rule_entry[] = {
+    { .op_prev = "darkframe",   .op_next = "rawprepare"  },
     { .op_prev = "rawprepare",  .op_next = "invert"      },
     { .op_prev = "invert",      .op_next = "temperature" },
     { .op_prev = "temperature", .op_next = "highlights"  },

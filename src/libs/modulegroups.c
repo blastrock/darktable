@@ -1626,6 +1626,7 @@ void init_presets(dt_lib_module_t *self)
   AM("denoiseprofile");
   AM("dither");
   AM("hazeremoval");
+  AM("darkframe");
   AM("hotpixels");
   AM("lens");
   AM("liquify");
@@ -1723,6 +1724,7 @@ void init_presets(dt_lib_module_t *self)
   AM("cacorrectrgb");
   AM("denoiseprofile");
   AM("hazeremoval");
+  AM("darkframe");
   AM("hotpixels");
   AM("lens");
   AM("retouch");
@@ -1766,6 +1768,7 @@ void init_presets(dt_lib_module_t *self)
   AM("cacorrectrgb");
   AM("denoiseprofile");
   AM("hazeremoval");
+  AM("darkframe");
   AM("hotpixels");
   AM("lens");
   AM("retouch");
@@ -1810,6 +1813,7 @@ void init_presets(dt_lib_module_t *self)
   AM("flip");
   AM("hazeremoval");
   AM("highlights");
+  AM("darkframe");
   AM("hotpixels");
   AM("lens");
   AM("lut3d");
